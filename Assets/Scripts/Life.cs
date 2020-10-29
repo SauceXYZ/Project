@@ -1,11 +1,12 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Life : MonoBehaviour
 {
-    private int apples = 5;
+    private static int apples = 5;
 
     public RawImage apple1;
     public RawImage apple2;
@@ -13,8 +14,14 @@ public class Life : MonoBehaviour
     public RawImage apple4;
     public RawImage apple5;
 
+    internal void HurtAndReset(int dmg)
+    {
+        throw new NotImplementedException();
+    }
+
     public Texture2D appleFull;
     public Texture2D appleEmpty;
+    public Text display;
 
     public void HurtAndReset()
     {
